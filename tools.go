@@ -189,26 +189,3 @@ func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
 	}
 	return string(body)
 }
-
-// converts epoch time to current time
-func (t *Tools) EpochConverMil(epochTime int64) time.Time {
-	convertedtime := time.UnixMilli(epochTime)
-	return convertedtime
-}
-
-// Parses string date into a date format.  Returns either the date or an error
-func (t *Tools) DateStrParse(dateStr string) (time.Time, error) {
-	formats := []string{"1/2/2006", "1-2-2006"}
-
-	var parsedDate time.Time
-	var err error
-
-	for _, format := range formats {
-		parsedDate, err = time.Parse(format, dateStr)
-		if err == nil {
-			break
-		}
-	}
-
-	return parsedDate, err
-}
