@@ -169,3 +169,45 @@ func (t *Tools) CopyDir(path string, orgpath string) error {
 	}
 	return nil
 }
+
+// fixes the json files to remove the items in the front of it to allow the system to read it correctly
+func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
+	fileContent := string(body)
+
+	// Removes the beging part of the json API return
+	resultsarrayKey := arrayKey
+
+	if strings.Contains(fileContent, resultsarrayKey) {
+
+		startIndex := strings.Index(fileContent, resultsarrayKey) + len(resultsarrayKey)
+
+		arrayContent := strings.TrimSpace(fileContent[startIndex:])
+		// removes the end } as the first part is removed in arrayKey
+		arrayContent = strings.TrimSuffix(arrayContent, "}")
+		return arrayContent
+	}
+	return string(body)
+}
+
+// converts epoch time to current time
+func (t *Tools) EpochConverMil(epochTime int64) time.Time {
+	convertedtime := time.UnixMilli(epochTime)
+	return convertedtime
+}
+
+// Parses string date into a date format.  Returns either the date or an error
+func (t *Tools) DateStrParse(dateStr string) (time.Time, error) {
+	formats := []string{"1/2/2006", "1-2-2006"}
+
+	var parsedDate time.Time
+	var err error
+
+	for _, format := range formats {
+		parsedDate, err = time.Parse(format, dateStr)
+		if err == nil {
+			break
+		}
+	}
+
+	return parsedDate, err
+}
