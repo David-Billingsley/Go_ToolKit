@@ -4,10 +4,10 @@
 
   And in your function put var tools toolkit.Tools
   
-### RandomString
+## RandomString
   This function takes an input ( whole number ), and outputs a random alpha numeric string ( abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ) for the user to use
 
-### FixJson
+## FixJson
   This function takes a string represntation of JSON and removes unnneded info from the string. It takes to parmeters one is the JSON string and the other is what you want removed. This returns the JSON as a string.
   This lets the user get the inner part of the JSON for the reutrned result form some API calls.
     Example:
@@ -16,5 +16,5 @@
 ## EpochConverMil
   This function takes a int64 number and returns time.  This is used to help where you have an [Epoc time]( https://www.epochconverter.com/ ) vaule and need to see its time in the tradional date format.
 
-### DateStrParse
+## DateStrParse
   This function takes a string representation of a date and converts it into a proper date format.
