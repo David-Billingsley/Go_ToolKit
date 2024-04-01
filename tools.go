@@ -214,26 +214,26 @@ func (t *Tools) DateStrParse(dateStr string) (time.Time, error) {
 }
 
 // Function to download a file from a server
-func downloadFile(url, filename string) error {
-    // Create the output file
-    outputFile, err := os.Create(filename)
-    if err != nil {
-        return err
-    }
-    defer outputFile.Close()
+func (t *Tools) DownloadFile(url, filename string) error {
+	// Create the output file
+	outputFile, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer outputFile.Close()
 
-    // Download the file
-    response, err := http.Get(url)
-    if err != nil {
-        return err
-    }
-    defer response.Body.Close()
+	// Download the file
+	response, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+	defer response.Body.Close()
 
-    // Write the downloaded data to the file
-    _, err = io.Copy(outputFile, response.Body)
-    if err != nil {
-        return err
-    }
+	// Write the downloaded data to the file
+	_, err = io.Copy(outputFile, response.Body)
+	if err != nil {
+		return err
+	}
 
-    return nil
+	return nil
 }
