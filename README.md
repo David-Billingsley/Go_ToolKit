@@ -43,4 +43,4 @@
 # URL
   
 ## Slugify
-  This creats a string with " - " so that you can use the string in the URLs
+  This function takes a string and outputs a string. It creats a string with " - " so that you can use the string in the URLs
