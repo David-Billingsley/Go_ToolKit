@@ -202,7 +202,7 @@ func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
 }
 
 // converts epoch time to current time
-func (t *Tools) EpochConverMil(epoctype string, epochTime int64) time.Time {
+func (t *Tools) EpochConver(epoctype string, epochTime int64) time.Time {
 	// generates a date in the future to show the use an issue
 	convertedtime := time.Now().Add(time.Hour * 22 * 7)
 	switch strings.ToLower(epoctype) {

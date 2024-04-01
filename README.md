@@ -18,7 +18,7 @@
       items:{[
 
 # Date:
-## EpochConverMil
+## EpochConver
   This function takes a string type int64 number and returns time.  This is used to help where you have an [Epoc time]( https://www.epochconverter.com/ ) vaule and need to see its time in the tradional date format. If you enter type of micro it does micro epoc time and milli does milli epoc time.
 
 ## DateStrParse
