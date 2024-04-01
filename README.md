@@ -39,3 +39,8 @@
 
 ## CopyDir
   This function takes a Orginating file path, and destination path.  It will move the files to this new path.
+
+# URL
+  
+## Slugify
+  This creats a string with " - " so that you can use the string in the URLs
