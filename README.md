@@ -1,4 +1,6 @@
 # Go_ToolKit
+  This libary is free of use, and is a helpful list of functions I have used over and over in code.
+  
 ## List of functions to help the end user with their projects
   To use the tool add toolkit "github.com/David-Billingsley/Go_ToolKit" to your code base
 
