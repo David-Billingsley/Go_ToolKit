@@ -171,6 +171,16 @@ func (t *Tools) CopyDir(path string, orgpath string) error {
 	return nil
 }
 
+// filepathInSameDir returns the full path to a file in the same directory as the executable
+func (t *Tools) FilePathInSameDir(fileName string) string {
+	exePath, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	exeDir := filepath.Dir(exePath)
+	return filepath.Join(exeDir, fileName)
+}
+
 // fixes the json files to remove the items in the front of it to allow the system to read it correctly
 func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
 	fileContent := string(body)

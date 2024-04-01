@@ -21,3 +21,6 @@
 
 ## DownloadFile
   This function takes a URL and filename.  It will download the file form the URL and save it with the filename provided.
+
+## FilePathInSameDir
+  This function takes a filename.  It gets the path of the bundled exe file, and saves the file in the same dirs. 
