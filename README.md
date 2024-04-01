@@ -19,5 +19,5 @@
 ## DateStrParse
   This function takes a string representation of a date and converts it into a proper date format.
 
-## RandomString
+## DownloadFile
   This function takes a URL and filename.  It will download the file form the URL and save it with the filename provided.
