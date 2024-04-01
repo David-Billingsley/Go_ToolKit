@@ -249,7 +249,7 @@ func (t *Tools) DownloadFile(url, filename string) error {
 	return nil
 }
 
-// Slugify creates a URL acceptable string
+// Slugify creates a URL acceptable string.  Removes spaces and puts - in the blank spots.
 func (t *Tools) Slugify(s string) (string, error) {
 	if s == "" {
 		return "", errors.New("empty string not permitted")
