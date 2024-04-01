@@ -24,3 +24,12 @@
 
 ## FilePathInSameDir
   This function takes a filename.  It gets the path of the bundled exe file, and returns the path with the filename attached. 
+
+## CreateDirIfNotExist
+  This function takes a filepath, and will create it if it does not exist.
+
+## DeleteDir
+  This function takes a filepath, and will delete it
+
+## CopyDir
+  This function takes a Orginating file path, and destination path.  It will move the files to this new path.
