@@ -202,8 +202,20 @@ func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
 }
 
 // converts epoch time to current time
-func (t *Tools) EpochConverMil(epochTime int64) time.Time {
-	convertedtime := time.UnixMilli(epochTime)
+func (t *Tools) EpochConverMil(epoctype string, epochTime int64) time.Time {
+	// generates a date in the future to show the use an issue
+	convertedtime := time.Now().Add(time.Hour * 22 * 7)
+	switch strings.ToLower(epoctype) {
+	// does the conversion for epoc milli
+	case "milli":
+		convertedtime := time.UnixMilli(epochTime)
+		return convertedtime
+	// does the conversion for epoc micro
+	case "micro":
+		convertedtime := time.UnixMicro(epochTime)
+		return convertedtime
+	}
+
 	return convertedtime
 }
 
