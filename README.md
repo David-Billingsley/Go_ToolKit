@@ -40,6 +40,9 @@
 ## CopyDir
   This function takes a Orginating file path, and destination path.  It will move the files to this new path.
 
+## BlankFileGen
+  This function takes a full filepath and generates a blank file.
+
 # URL
   
 ## Slugify

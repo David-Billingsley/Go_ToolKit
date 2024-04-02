@@ -172,6 +172,16 @@ func (t *Tools) CopyDir(path string, orgpath string) error {
 	return nil
 }
 
+// Creates an empty file
+func (t *Tools) BlankFileGen(path string) {
+	// Generate a blank file with the path and name passed into it in the path string
+	outputfile, e := os.Create(path)
+	if e != nil {
+		log.Fatal(e)
+	}
+	outputfile.Close()
+}
+
 // filepathInSameDir returns the full path to a file in the same directory as the executable
 func (t *Tools) FilePathInSameDir(fileName string) string {
 	exePath, err := os.Executable()
