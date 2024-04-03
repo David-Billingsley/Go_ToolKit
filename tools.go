@@ -184,7 +184,7 @@ func (t *Tools) BlankFileGen(path string) (bool, error) {
 	return true, nil
 }
 
-// filepathInSameDir returns the full path to a file in the same directory as the executable
+// FilePathInSameDir returns the full path to a file in the same directory as the executable
 func (t *Tools) FilePathInSameDir(fileName string) string {
 	exePath, err := os.Executable()
 	if err != nil {
@@ -194,7 +194,7 @@ func (t *Tools) FilePathInSameDir(fileName string) string {
 	return filepath.Join(exeDir, fileName)
 }
 
-// fixes the json files to remove the items in the front of it to allow the system to read it correctly
+// Fixes the json files to remove the items in the front of it to allow the system to read it correctly
 func (t *Tools) FixJson(body string, arrayKey string) (arrayContent string) {
 	fileContent := string(body)
 
