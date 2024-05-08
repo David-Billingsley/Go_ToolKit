@@ -233,7 +233,7 @@ func (t *Tools) EpochConver(epoctype string, epochTime int64) time.Time {
 
 // Parses string date into a date format.  Returns either the date or an error
 func (t *Tools) DateStrParse(dateStr string) (time.Time, error) {
-	formats := []string{"1/2/2006", "1-2-2006"}
+	formats := []string{"1/2/2006", "1-2-2006", "2006/1/2", "2006-1-2"}
 
 	var parsedDate time.Time
 	var err error
